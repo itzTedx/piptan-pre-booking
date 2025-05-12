@@ -47,7 +47,7 @@ export default function Home() {
           <div className="front">
             <div className="cover">
               <Image
-                src="/cover.jpg"
+                src="/cover.webp"
                 alt="Book cover preview"
                 fill
                 priority
