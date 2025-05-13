@@ -28,6 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Piptan Book" />
+      </head>
       <body
         className={cn(
           plusJakarta.className,

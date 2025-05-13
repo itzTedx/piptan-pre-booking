@@ -86,6 +86,7 @@ export default function Home() {
       <PreOrderSection />
       <AuthorSection />
       <WhyReadSection />
+      <AvailabilitySection />
     </main>
   );
 }
