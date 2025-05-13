@@ -1,7 +1,10 @@
 import { Metadata } from "next";
-import Image from "next/image";
 
-import { Button } from "@/components/ui/button";
+import AboutSection from "@/components/sections/about";
+import { AuthorSection } from "@/components/sections/author";
+import AvailabilitySection from "@/components/sections/availability";
+import HeroSection from "@/components/sections/hero";
+import PreOrderSection from "@/components/sections/pre-order";
 
 const siteConfig = {
   title: `Pre-Order Dubai's Urban Evolution | Shashi P. Piptan`,
@@ -35,46 +38,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen pt-4">
-      <section className="relative container grid grid-cols-3 gap-3 pt-12">
-        <header className="absolute inset-x-0 text-center">
-          <h1 className="font-display text-8xl font-light">New Launch</h1>
-        </header>
-        <div className="self-end">
-          <p className="font-grotesk text-4xl/11">
-            {`Discover the visionary strategies behind one of the world's most
-            dynamic cities.`}
-          </p>
-        </div>
-        <div className="book-container" aria-label="Book preview">
-          <article className="book" role="presentation">
-            <div className="front">
-              <div className="cover">
-                <Image
-                  src="/cover.webp"
-                  alt="Book cover preview"
-                  fill
-                  priority
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="left-side" aria-hidden="true">
-              <Image src="/side.jpg" alt="" fill priority />
-            </div>
-          </article>
-        </div>
-        <div className="self-end">
-          <p className="font-grotesk text-lg">
-            Unlock the strategies that built one of the world’s most dynamic
-            cities. Be the first to know when the book launches on Amazon!
-          </p>
-          <div className="flex items-center gap-6 pt-4">
-            <Button variant="secondary">Pre-Order Now</Button>
-            <Button variant="link">Learn More</Button>
-          </div>
-        </div>
-      </section>
+    <main>
+      <HeroSection />
+      <AvailabilitySection />
+      <AboutSection />
+      <PreOrderSection />
+      <AuthorSection />
     </main>
   );
 }
