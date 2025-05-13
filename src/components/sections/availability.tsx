@@ -1,6 +1,8 @@
+import { memo } from "react";
+
 import { Amazon, AmazonKindle } from "@/assets/brand-logos";
 
-export default function AvailabilitySection() {
+const AvailabilitySection = memo(function AvailabilitySection() {
   return (
     <section aria-labelledby="availability-title" className="pt-6 pb-12">
       <h3
@@ -12,22 +14,40 @@ export default function AvailabilitySection() {
       <div
         className="flex flex-wrap items-center justify-center gap-3"
         role="list"
+        itemScope
+        itemType="https://schema.org/ItemList"
       >
         <div
-          className="bg-foreground/10 flex h-20 items-center justify-center rounded-xl px-9"
+          className="bg-foreground/10 hover:bg-foreground/15 flex h-20 items-center justify-center rounded-xl px-9 transition-colors"
           role="listitem"
+          itemProp="itemListElement"
+          itemScope
+          itemType="https://schema.org/Book"
         >
           <span className="sr-only">Available on Amazon Books</span>
-          <Amazon aria-hidden="true" />
+          <Amazon
+            aria-hidden="true"
+            aria-label="Amazon"
+            className="h-auto w-auto"
+          />
         </div>
         <div
-          className="bg-foreground/10 flex h-20 items-center justify-center rounded-xl px-9"
+          className="bg-foreground/10 hover:bg-foreground/15 flex h-20 items-center justify-center rounded-xl px-9 transition-colors"
           role="listitem"
+          itemProp="itemListElement"
+          itemScope
+          itemType="https://schema.org/Book"
         >
           <span className="sr-only">Available on Amazon Kindle</span>
-          <AmazonKindle aria-hidden="true" />
+          <AmazonKindle
+            aria-hidden="true"
+            aria-label="Amazon Kindle"
+            className="h-auto w-auto"
+          />
         </div>
       </div>
     </section>
   );
-}
+});
+
+export default AvailabilitySection;
