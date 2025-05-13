@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Button } from "../ui/button";
 
@@ -59,7 +60,9 @@ export default function HeroSection() {
             Amazon!
           </p>
           <div className="flex items-center gap-6 pt-4">
-            <Button variant="secondary">Pre-Order Now</Button>
+            <Button variant="secondary" asChild>
+              <Link href="#pre-order">Pre-Order Now</Link>
+            </Button>
             <Button variant="link">Learn More</Button>
           </div>
         </div>

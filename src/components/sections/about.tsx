@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { memo } from "react";
 
 import { Button } from "../ui/button";
@@ -24,7 +25,7 @@ const keywords = [
 function AboutSection() {
   return (
     <section
-      className="relative pt-12 pb-20 md:pt-20 md:pb-40"
+      className="relative pt-12 pb-20 md:pt-16 md:pb-40"
       aria-labelledby="about-heading"
     >
       <div className="container max-w-7xl">
@@ -78,8 +79,8 @@ function AboutSection() {
           </CardContent>
           <CardFooter>
             <div className="flex items-center gap-6 pt-4">
-              <Button variant="secondary" aria-label="Pre-order the book now">
-                Pre-Order Now
+              <Button variant="secondary" asChild>
+                <Link href="#pre-order">Pre-Order Now</Link>
               </Button>
               <Button variant="link" aria-label="Learn more about the book">
                 Learn More
@@ -91,11 +92,11 @@ function AboutSection() {
       <Image
         src="/book-mockup.png"
         alt="3D mockup of the book 'Blueprint for Infrastructure Investment'"
-        className="-z-10 object-contain max-md:object-bottom md:object-cover"
+        className="-z-10 object-contain object-left max-md:object-bottom md:object-cover"
         fill
         priority
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        quality={90}
+        sizes="100vw"
+        quality={100}
       />
     </section>
   );
