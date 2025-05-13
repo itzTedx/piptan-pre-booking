@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/cover.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Pre-booking cover image",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/cover.jpg"],
+    images: ["/og-image.webp"],
     creator: "@shashipiptan",
   },
   metadataBase: new URL("https://shashipiptan.com"),
