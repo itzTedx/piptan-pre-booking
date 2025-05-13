@@ -9,7 +9,7 @@ export default function PreOrderSection() {
       id="pre-order"
     >
       <div className="relative max-md:aspect-video">
-        <Image src="/burj-khalifa.jpg" alt="" fill className="object-cover" />
+        <Image src="/burj-khalifa.webp" alt="" fill className="object-cover" />
       </div>
       <div className="p-12 md:px-24 md:py-40">
         <h3 className="font-display text-3xl leading-relaxed md:text-5xl">

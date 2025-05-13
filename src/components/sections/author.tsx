@@ -4,30 +4,43 @@ import { Separator } from "../ui/separator";
 
 export const AuthorSection = () => {
   return (
-    <section className="grid py-20 md:grid-cols-12">
+    <section
+      className="grid py-20 md:grid-cols-12"
+      aria-labelledby="author-section-title"
+    >
       <div className="py-12 md:col-span-8">
         <div className="bg-foreground/5 relative container space-y-4 py-9">
           <div className="grid w-full gap-4 max-md:grid-cols-2">
             <div className="space-y-4">
-              <h3 className="font-grotesk text-xl text-[#37D787] md:text-2xl">
+              <h3
+                id="author-section-title"
+                className="font-grotesk text-xl text-[#37D787] md:text-2xl"
+              >
                 Meet the Author
               </h3>
               <Separator />
-              <h4
-                className="font-display text-4xl leading-tight text-[#37D787] md:hidden"
-                aria-hidden
-              >
+              <h4 className="font-display text-4xl leading-tight text-[#37D787] md:hidden">
                 Shashi P. Piptan
               </h4>
             </div>
             <div className="absolute -top-20 right-0 aspect-[4/5] w-1/2 md:hidden">
-              <Image src="/shashi.jpg" alt="" fill className="object-cover" />
+              <Image
+                src="/shashi.webp"
+                alt="Shashi P. Piptan - Global Investment Advisor"
+                fill
+                sizes="(max-width: 768px) 50vw, 0vw"
+                className="object-cover"
+                priority={false}
+                loading="lazy"
+              />
             </div>
           </div>
           <h4 className="font-display relative z-10 text-4xl leading-tight text-[#37D787]">
-            <span className="hidden md:inline-block">Shashi P. Piptan:</span> A
-            Global Investment Advisor, Infrastructure Strategist, and Real
-            Estate Visionary.
+            <span className="hidden md:inline-block">Shashi P. Piptan:</span>{" "}
+            <span>
+              A Global Investment Advisor, Infrastructure Strategist, and Real
+              Estate Visionary.
+            </span>
           </h4>
           <div className="space-y-3 text-sm md:space-y-4 md:text-base">
             <p className="leading-loose text-pretty">
@@ -66,7 +79,15 @@ export const AuthorSection = () => {
         </div>
       </div>
       <div className="relative hidden md:col-span-4 md:block">
-        <Image src="/shashi.jpg" alt="" fill className="object-cover" />
+        <Image
+          src="/shashi.webp"
+          alt="Portrait of Shashi P. Piptan"
+          fill
+          sizes="(min-width: 768px) 33vw, 0vw"
+          className="object-cover"
+          priority={true}
+          quality={90}
+        />
       </div>
     </section>
   );

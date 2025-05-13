@@ -38,12 +38,13 @@ export default function HeroSection() {
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 400px"
                   itemProp="image"
+                  quality={100}
                 />
               </div>
             </div>
             <div className="left-side" aria-hidden="true">
               <Image
-                src="/side.jpg"
+                src="/side.webp"
                 alt="Book side view"
                 fill
                 priority
@@ -68,7 +69,7 @@ export default function HeroSection() {
         </div>
       </div>
       <Image
-        src="/due-bg.jpg"
+        src="/due-bg.webp"
         alt="Dubai cityscape background"
         fill
         priority={false}

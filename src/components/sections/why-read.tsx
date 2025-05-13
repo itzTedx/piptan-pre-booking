@@ -37,6 +37,7 @@ export const WhyReadSection = () => {
           alt=""
           fill
           className="rounded-2xl object-cover"
+          quality={100}
         />
       </div>
     </section>

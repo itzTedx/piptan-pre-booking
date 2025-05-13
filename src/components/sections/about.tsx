@@ -90,7 +90,7 @@ function AboutSection() {
         </Card>
       </div>
       <Image
-        src="/book-mockup.png"
+        src="/book-mockup.webp"
         alt="3D mockup of the book 'Blueprint for Infrastructure Investment'"
         className="-z-10 object-contain object-left max-md:object-bottom md:object-cover"
         fill
