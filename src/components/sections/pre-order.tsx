@@ -5,7 +5,7 @@ import { PreOrderForm } from "../form/pre-order-form";
 export default function PreOrderSection() {
   return (
     <section className="bg-foreground text-background grid grid-cols-1 md:grid-cols-2">
-      <div className="relative order-2 max-md:aspect-video md:order-1">
+      <div className="relative max-md:aspect-video">
         <Image src="/burj-khalifa.jpg" alt="" fill className="object-cover" />
       </div>
       <div className="p-12 md:px-24 md:py-40">
