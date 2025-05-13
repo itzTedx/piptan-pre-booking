@@ -48,6 +48,7 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.author }],
   openGraph: {
+    url: siteConfig.url,
     title: siteConfig.title,
     description: siteConfig.description,
     type: "website",
