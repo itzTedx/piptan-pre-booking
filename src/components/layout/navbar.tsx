@@ -1,6 +1,6 @@
 import { Logo } from "@/assets/logo";
 
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 export const Navbar = () => {
   return (

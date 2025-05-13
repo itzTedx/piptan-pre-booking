@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
 import { excrallik, plusJakarta, radioGrostek } from "@/assets/fonts";
-import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/layout/navbar";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
@@ -28,6 +29,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

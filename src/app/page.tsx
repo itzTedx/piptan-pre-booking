@@ -5,6 +5,7 @@ import { AuthorSection } from "@/components/sections/author";
 import AvailabilitySection from "@/components/sections/availability";
 import HeroSection from "@/components/sections/hero";
 import PreOrderSection from "@/components/sections/pre-order";
+import { WhyReadSection } from "@/components/sections/why-read";
 
 const siteConfig = {
   title: `Pre-Order Dubai's Urban Evolution | Shashi P. Piptan`,
@@ -44,6 +45,8 @@ export default function Home() {
       <AboutSection />
       <PreOrderSection />
       <AuthorSection />
+      <WhyReadSection />
+      <AvailabilitySection />
     </main>
   );
 }

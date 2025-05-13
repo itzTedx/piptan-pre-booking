@@ -17,8 +17,8 @@ export default function HeroSection() {
       </header>
       <div className="self-end pb-28">
         <h2 className="font-grotesk text-4xl/11" itemProp="alternativeHeadline">
-          {`Discover the visionary strategies behind one of the world&apos;s most
-            dynamic cities.`}
+          Discover the visionary strategies behind one of the world&apos;s most
+          dynamic cities.
         </h2>
       </div>
       <div className="book-container" aria-label="Book preview">
@@ -28,8 +28,7 @@ export default function HeroSection() {
               <Image
                 src="/cover.webp"
                 alt="Dubai Urban Development Strategy Book Cover"
-                width={400}
-                height={600}
+                fill
                 priority
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 400px"
@@ -41,8 +40,7 @@ export default function HeroSection() {
             <Image
               src="/side.jpg"
               alt="Book side view"
-              width={50}
-              height={600}
+              fill
               priority
               className="object-cover"
               sizes="50px"
