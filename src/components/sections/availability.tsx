@@ -9,7 +9,10 @@ export default function AvailabilitySection() {
       >
         Books are available on:
       </h3>
-      <div className="flex items-center justify-center gap-3" role="list">
+      <div
+        className="flex flex-wrap items-center justify-center gap-3"
+        role="list"
+      >
         <div
           className="bg-foreground/10 flex h-20 items-center justify-center rounded-xl px-9"
           role="listitem"

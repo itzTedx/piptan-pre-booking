@@ -23,30 +23,38 @@ const keywords = [
 
 function AboutSection() {
   return (
-    <section className="relative pt-20 pb-40" aria-labelledby="about-heading">
+    <section
+      className="relative pt-12 pb-20 md:pt-20 md:pb-40"
+      aria-labelledby="about-heading"
+    >
       <div className="container max-w-7xl">
         <h2 id="about-heading" className="font-grotesk text-4xl font-bold">
           About the book
         </h2>
-        <ul className="flex flex-wrap gap-3 py-6" aria-label="Book topics">
+        <ul
+          className="flex flex-wrap gap-1.5 py-6 md:gap-3"
+          aria-label="Book topics"
+        >
           {keywords.map((keyword) => (
             <li
               key={keyword}
-              className="bg-secondary text-secondary-foreground font-grotesk rounded-md px-3 py-1.5 text-sm tracking-wider"
+              className="bg-secondary text-secondary-foreground font-grotesk rounded-md px-2 py-1 text-xs tracking-wider md:px-3 md:py-1.5 md:text-sm"
             >
               {keyword}
             </li>
           ))}
         </ul>
-        <Card className="max-w-3xl gap-5">
+        <Card className="max-w-3xl gap-4 md:gap-5">
           <CardHeader className="pb-0 text-[#37D787]">
-            <p className="font-display pb-3 tracking-wide">
+            <p className="font-display pb-2 tracking-wide md:pb-3">
               Blueprints for the Future
             </p>
             <Separator />
-            <CardTitle className="pt-3">The Urban Evolution of Dubai</CardTitle>
+            <CardTitle className="pt-2 leading-8 md:pt-3">
+              The Urban Evolution of Dubai
+            </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-3">
+          <CardContent className="space-y-3 text-sm md:text-base">
             <p className="leading-loose text-pretty">
               A Blueprint for Infrastructure Investment offers a timely guide to
               Dubai&apos;s transformation into a global hub. Written by Global
@@ -83,7 +91,7 @@ function AboutSection() {
       <Image
         src="/book-mockup.png"
         alt="3D mockup of the book 'Blueprint for Infrastructure Investment'"
-        className="-z-10 object-cover"
+        className="-z-10 object-contain max-md:object-bottom md:object-cover"
         fill
         priority
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

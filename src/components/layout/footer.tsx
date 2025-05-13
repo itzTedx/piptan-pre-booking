@@ -8,7 +8,7 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="bg-foreground/10 container flex items-center justify-between border-t py-4">
+    <footer className="bg-foreground/10 container flex flex-wrap items-center justify-between border-t py-4">
       <Link href="/privacy">Privacy Policy</Link>
 
       <p>© {new Date().getFullYear()}, Shashi Piptan, All rights reserved</p>
