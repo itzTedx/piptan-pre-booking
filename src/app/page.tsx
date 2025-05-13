@@ -21,6 +21,7 @@ const siteConfig = {
   ],
   bookPrice: "49.99",
   currency: "USD",
+  url: "https://piptan-pre-booking.vercel.app/",
 };
 
 // JSON-LD Schema
@@ -68,9 +69,9 @@ export const metadata: Metadata = {
     images: ["/og-image.webp"],
     creator: "@shashipiptan",
   },
-  metadataBase: new URL("https://shashipiptan.com"),
+  metadataBase: new URL(siteConfig.url),
   alternates: {
-    canonical: "https://shashipiptan.com",
+    canonical: siteConfig.url,
   },
   other: {
     "script:ld+json": JSON.stringify(jsonLd),
