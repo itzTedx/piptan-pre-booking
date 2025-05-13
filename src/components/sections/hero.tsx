@@ -7,11 +7,11 @@ export default function HeroSection() {
     <section
       itemScope
       itemType="https://schema.org/Book"
-      className="relative min-h-screen"
+      className="relative min-h-screen pt-12"
       aria-label="Book launch announcement"
     >
-      <div className="container grid grid-cols-1 gap-3 pt-36 md:grid-cols-3">
-        <header className="absolute inset-x-0 top-24 text-center">
+      <div className="relative container grid grid-cols-1 gap-3 pt-28 md:grid-cols-3 md:pt-36">
+        <header className="absolute inset-x-0 top-24 hidden text-center md:block">
           <h1 className="font-display font-light md:text-8xl" itemProp="name">
             New Launch
           </h1>

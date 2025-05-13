@@ -4,18 +4,32 @@ import { Separator } from "../ui/separator";
 
 export const AuthorSection = () => {
   return (
-    <section className="grid grid-cols-12 py-20">
-      <div className="col-span-8 py-12">
-        <div className="bg-foreground/5 container space-y-4 py-9">
-          <h3 className="font-grotesk text-2xl text-[#37D787]">
-            Meet the Author
-          </h3>
-          <Separator />
-          <h4 className="font-display text-4xl leading-tight text-[#37D787]">
-            Shashi P. Piptan: A Global Investment Advisor, Infrastructure
-            Strategist, and Real Estate Visionary.
+    <section className="grid py-20 md:grid-cols-12">
+      <div className="py-12 md:col-span-8">
+        <div className="bg-foreground/5 relative container space-y-4 py-9">
+          <div className="grid w-full gap-4 max-md:grid-cols-2">
+            <div className="space-y-4">
+              <h3 className="font-grotesk text-xl text-[#37D787] md:text-2xl">
+                Meet the Author
+              </h3>
+              <Separator />
+              <h4
+                className="font-display text-4xl leading-tight text-[#37D787] md:hidden"
+                aria-hidden
+              >
+                Shashi P. Piptan
+              </h4>
+            </div>
+            <div className="absolute -top-20 right-0 aspect-[4/5] w-1/2 md:hidden">
+              <Image src="/shashi.jpg" alt="" fill className="object-cover" />
+            </div>
+          </div>
+          <h4 className="font-display relative z-10 text-4xl leading-tight text-[#37D787]">
+            <span className="hidden md:inline-block">Shashi P. Piptan:</span> A
+            Global Investment Advisor, Infrastructure Strategist, and Real
+            Estate Visionary.
           </h4>
-          <div className="space-y-4">
+          <div className="space-y-3 text-sm md:space-y-4 md:text-base">
             <p className="leading-loose text-pretty">
               Shashi Piptan is a seasoned Global Investment Advisor with a sharp
               focus on infrastructure development, real estate strategy, and
@@ -51,7 +65,7 @@ export const AuthorSection = () => {
           </div>
         </div>
       </div>
-      <div className="relative col-span-4">
+      <div className="relative hidden md:col-span-4 md:block">
         <Image src="/shashi.jpg" alt="" fill className="object-cover" />
       </div>
     </section>

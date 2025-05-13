@@ -6,7 +6,7 @@ export const WhyReadSection = () => {
       <h3 className="font-display pb-6 text-3xl">
         Why Dubai’s Urban Evolution is Essential Reading
       </h3>
-      <div className="grid grid-cols-2 gap-9 pb-6">
+      <div className="grid grid-cols-1 gap-4 pb-6 md:grid-cols-2 md:gap-9">
         <ul className="list-disc space-y-4 pl-6">
           <li>
             Learn how Dubai’s strategic investments shaped a global powerhouse.

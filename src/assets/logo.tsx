@@ -1,7 +1,11 @@
+import { JSX, SVGProps } from "react";
 
-export const Logo = () => {
+export const Logo = (
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+) => {
   return (
     <svg
+      {...props}
       width="76"
       height="56"
       viewBox="0 0 76 56"
@@ -178,5 +182,5 @@ export const Logo = () => {
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};
