@@ -21,23 +21,23 @@ export default function HeroSection() {
     <section
       itemScope
       itemType="https://schema.org/Book"
-      className="relative min-h-screen pt-12"
+      className="relative min-h-screen pt-12 pb-28"
       aria-label="Book launch announcement"
     >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(bookMetadata) }}
       />
-      <div className="relative container grid grid-cols-1 gap-3 pt-20 lg:grid-cols-3 lg:pt-36">
-        <header className="s absolute inset-x-0 top-9 text-center lg:top-24">
+      <div className="relative container grid grid-cols-1 gap-3 pt-20 lg:grid-cols-3 lg:pt-24">
+        <header className="s absolute inset-x-0 top-9 text-center lg:top-12">
           <h1
-            className="font-display text-2xl font-light md:text-4xl lg:text-8xl"
+            className="font-display text-2xl font-light md:text-4xl lg:text-[5rem]"
             itemProp="name"
           >
             Launching Soon
           </h1>
         </header>
-        <div className="md:self-end lg:pb-28">
+        <div className="md:self-end lg:pb-20">
           <h2
             className="font-grotesk text-3xl max-lg:text-center md:text-4xl/11"
             itemProp="alternativeHeadline"
@@ -50,6 +50,19 @@ export default function HeroSection() {
           <article className="book" role="presentation">
             <div className="front">
               <div className="cover">
+                <Image
+                  src="/gold-cover.webp"
+                  alt="Dubai Urban Development Strategy Book Cover"
+                  fill
+                  priority
+                  fetchPriority="high"
+                  className="gold-cover z-10 object-cover"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
+                  itemProp="image"
+                  quality={90}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4bHRsbHiUgJSgwVz1AMkE1QkhYWE9eSVJMYklWWl1fZGRxc359g3NgfWZ1a19n/9j/"
+                />
                 <Image
                   src="/cover.webp"
                   alt="Dubai Urban Development Strategy Book Cover"
@@ -77,8 +90,11 @@ export default function HeroSection() {
               />
             </div>
           </article>
+          {/* <div className="absolute inset-x-0 -bottom-1/2 -z-10 -translate-y-1/4">
+            <Image src="/books.webp" alt="" height={1342} width={1510} />
+          </div> */}
         </div>
-        <div className="self-end pb-28">
+        <div className="z-10 self-end pb-20">
           <p className="font-grotesk text-lg" itemProp="description">
             Explore Dubai&apos;s transformation through expert insights and
             proven strategies for investors seeking high returns in real estate,
