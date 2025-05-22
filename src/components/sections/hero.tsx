@@ -7,7 +7,7 @@ export default function HeroSection() {
   const bookMetadata = {
     "@context": "https://schema.org",
     "@type": "Book",
-    name: "Dubai Urban Development Strategy",
+    name: "Dubai Urban Evolution",
     description:
       "Unlock the strategies that built one of the world's most dynamic cities.",
     image: "/cover.webp",
@@ -28,19 +28,22 @@ export default function HeroSection() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(bookMetadata) }}
       />
-      <div className="relative container grid grid-cols-1 gap-3 pt-28 md:grid-cols-3 md:pt-36">
-        <header className="absolute inset-x-0 top-24 hidden text-center md:block">
-          <h1 className="font-display font-light md:text-8xl" itemProp="name">
-            New Launch
+      <div className="relative container grid grid-cols-1 gap-3 pt-20 lg:grid-cols-3 lg:pt-36">
+        <header className="s absolute inset-x-0 top-9 text-center lg:top-24">
+          <h1
+            className="font-display text-2xl font-light md:text-4xl lg:text-8xl"
+            itemProp="name"
+          >
+            Launching Soon
           </h1>
         </header>
-        <div className="md:self-end md:pb-28">
+        <div className="md:self-end lg:pb-28">
           <h2
-            className="font-grotesk text-3xl md:text-4xl/11"
+            className="font-grotesk text-3xl max-lg:text-center md:text-4xl/11"
             itemProp="alternativeHeadline"
           >
             Discover the visionary strategies behind one of the world&apos;s
-            most dynamic cities.
+            most iconic and dynamic cities.
           </h2>
         </div>
         <div className="book-container" aria-label="Book preview">
@@ -77,9 +80,9 @@ export default function HeroSection() {
         </div>
         <div className="self-end pb-28">
           <p className="font-grotesk text-lg" itemProp="description">
-            Unlock the strategies that built one of the world&apos;s most
-            dynamic cities. Be the first to know when the book launches on
-            Amazon!
+            Explore Dubai&apos;s transformation through expert insights and
+            proven strategies for investors seeking high returns in real estate,
+            infrastructure, and urban development. Your roadmap starts here!
           </p>
           <div className="flex items-center gap-6 pt-4">
             <Button variant="secondary" asChild>

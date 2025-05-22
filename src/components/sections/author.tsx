@@ -8,7 +8,7 @@ export const AuthorSection = () => {
       className="grid py-20 md:grid-cols-12"
       aria-labelledby="author-section-title"
     >
-      <div className="py-12 md:col-span-8">
+      <div className="py-12 md:col-span-6 lg:col-span-8">
         <div className="bg-foreground/5 relative container space-y-4 py-9">
           <div className="grid w-full gap-4 max-md:grid-cols-2">
             <div className="space-y-4">
@@ -16,10 +16,10 @@ export const AuthorSection = () => {
                 id="author-section-title"
                 className="font-grotesk text-xl text-[#37D787] md:text-2xl"
               >
-                Meet the Author
+                From the Author&apos;s Desk
               </h3>
               <Separator />
-              <h4 className="font-display text-4xl leading-tight text-[#37D787] md:hidden">
+              <h4 className="font-display text-3xl leading-tight text-[#37D787] md:hidden">
                 Shashi P. Piptan
               </h4>
             </div>
@@ -35,14 +35,11 @@ export const AuthorSection = () => {
               />
             </div>
           </div>
-          <h4 className="font-display relative z-10 text-4xl leading-tight text-[#37D787]">
-            <span className="hidden md:inline-block">Shashi P. Piptan:</span>{" "}
-            <span>
-              A Global Investment Advisor, Infrastructure Strategist, and Real
-              Estate Visionary.
-            </span>
+          <h4 className="font-display relative z-10 leading-tight text-[#37D787] md:text-3xl lg:text-4xl">
+            <span className="hidden md:inline-block">Shashi S. Piptan:</span>{" "}
+            <span>A Global Investment Advisor, Infrastructure Strategist.</span>
           </h4>
-          <div className="space-y-3 text-sm md:space-y-4 md:text-base">
+          <div className="space-y-3 text-sm font-light md:space-y-4 lg:text-base">
             <p className="leading-loose text-pretty">
               Shashi Piptan is a seasoned Global Investment Advisor with a sharp
               focus on infrastructure development, real estate strategy, and
@@ -78,7 +75,7 @@ export const AuthorSection = () => {
           </div>
         </div>
       </div>
-      <div className="relative hidden md:col-span-4 md:block">
+      <div className="relative col-span-6 hidden md:block lg:col-span-4">
         <Image
           src="/shashi.webp"
           alt="Portrait of Shashi P. Piptan"

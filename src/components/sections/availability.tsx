@@ -9,7 +9,7 @@ const AvailabilitySection = memo(function AvailabilitySection() {
         id="availability-title"
         className="font-display mb-4 text-center text-xl"
       >
-        Books are available on:
+        Available soon on:
       </h3>
       <div
         className="flex flex-wrap items-center justify-center gap-3"

@@ -21,7 +21,7 @@ export const Navbar = () => {
           className="flex items-center"
           aria-label="Go to homepage"
         >
-          <Logo className="size-auto md:size-28" />
+          <Logo className="size-auto md:size-20" />
         </Link>
         <Button variant="secondary" asChild aria-label="Pre-order the book now">
           <Link href="#pre-order">Pre-Order Now</Link>

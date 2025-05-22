@@ -13,13 +13,13 @@ import {
 import { Separator } from "../ui/separator";
 
 const keywords = [
-  "Dubai",
+  "Vision",
+  "Innovation",
   "Investment",
-  "Infrastructure",
-  "Growth",
-  "Strategy",
-  "Development",
-  "Urbanism",
+  "Capital",
+  "Returns",
+  "Planning",
+  "Leadership",
 ] as const;
 
 function AboutSection() {
@@ -47,33 +47,34 @@ function AboutSection() {
         </ul>
         <Card className="max-w-3xl gap-4 md:gap-5">
           <CardHeader className="pb-0 text-[#37D787]">
-            <p className="font-display pb-2 tracking-wide md:pb-3">
-              Blueprints for the Future
+            <p className="pb-2 tracking-wide md:pb-3">
+              Unlock Dubai&apos; Growth
             </p>
             <Separator />
-            <CardTitle className="pt-2 leading-8 md:pt-3">
-              The Urban Evolution of Dubai
+            <CardTitle className="font-display pt-2 leading-tight md:pt-3">
+              The Urban Evolution of Dubai: A Blueprint for Infrastructure
+              Investment
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm md:text-base">
             <p className="leading-loose text-pretty">
-              A Blueprint for Infrastructure Investment offers a timely guide to
-              Dubai&apos;s transformation into a global hub. Written by Global
-              Investment Advisor Shashi Piptan, it reveals the vision, planning,
-              and execution behind the city&apos;s rise, blending deep research
-              with practical insights.
+              is compelling guide offers a fresh perspective on how Dubai has
+              quickly emerged as a global benchmark for innovation and urban
+              advancement.
             </p>
             <p className="leading-loose text-pretty">
-              The book explores strategic infrastructure investments, urban
-              planning, and regulatory frameworks that attract global investors,
-              providing actionable knowledge for developers, investors,
-              entrepreneurs, and policymakers.
+              It explores the city&apos;s journey through visionary leadership,
+              strategic development, and precise execution. Merging thorough
+              research with practical experience, it sheds light on crucial
+              infrastructure initiatives, modern urban planning techniques, and
+              investor-centric policies.
             </p>
             <p className="pb-4 leading-loose text-pretty">
-              With expert contributions, it not only charts Dubai&apos;s growth
-              but highlights future opportunities. More than a book, it&apos;s
-              an essential roadmap for anyone looking to invest in Dubai&apos;s
-              dynamic future.
+              Designed for investors, developers, entrepreneurs, and
+              decision-makers, this resource provides essential knowledge to
+              navigate Dubai&apos;s promising market. Featuring expert insights
+              throughout, it acts as a forward-thinking roadmap to the
+              city&apos;s future growth and investment opportunities.
             </p>
             <Separator />
           </CardContent>

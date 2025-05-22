@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 
 import { excrallik, plusJakarta, radioGrostek } from "@/assets/fonts";
+import BreakpointIndicator from "@/components/breakpoin-indicator";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { cn } from "@/lib/utils";
@@ -41,6 +42,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <BreakpointIndicator />
       </body>
     </html>
   );

@@ -20,16 +20,16 @@ export default function PreOrderSection() {
           loading="eager"
         />
       </div>
-      <div className="p-12 md:px-24 md:py-40">
+      <div className="p-12 lg:px-24 lg:py-40">
         <h3
           id="pre-order-heading"
-          className="font-display text-3xl leading-relaxed md:text-5xl"
+          className="font-display text-3xl leading-normal md:text-4xl lg:text-5xl"
         >
           Stay Updated on the Launch!
         </h3>
         <p className="font-grotesk mt-4 md:text-lg md:leading-loose">
           Submit your email to be notified when Dubai&apos;s Urban Evolution by
-          Shashi P. Piptan is available on Amazon.
+          Shashi S. Piptan is available on Amazon.
         </p>
         <PreOrderForm />
       </div>

@@ -10,7 +10,7 @@ import { WhyReadSection } from "@/components/sections/why-read";
 const siteConfig = {
   title: `Pre-Order Dubai's Urban Evolution | Shashi P. Piptan`,
   description: `Sign up for early access to Dubai's Urban Evolution by Shashi P. Piptan — a powerful guide to infrastructure investment and future-ready urban development. Get launch updates and exclusive bonuses!`,
-  author: "Shashi P. Piptan",
+  author: "Shashi S. Piptan",
   keywords: [
     "Dubai",
     "Urban Evolution",
@@ -19,8 +19,7 @@ const siteConfig = {
     "Pre-order",
     "Book",
   ],
-  bookPrice: "49.99",
-  currency: "USD",
+
   url: "https://piptan-pre-booking.vercel.app/",
 };
 
@@ -34,12 +33,6 @@ const jsonLd = {
     name: siteConfig.author,
   },
   description: siteConfig.description,
-  offers: {
-    "@type": "Offer",
-    price: siteConfig.bookPrice,
-    priceCurrency: siteConfig.currency,
-    availability: "https://schema.org/PreOrder",
-  },
 };
 
 export const metadata: Metadata = {
