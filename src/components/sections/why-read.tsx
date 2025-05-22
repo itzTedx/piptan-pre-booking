@@ -1,8 +1,25 @@
+"use client";
+
 import Image from "next/image";
+import React from "react";
+
+import Autoplay from "embla-carousel-autoplay";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 export const WhyReadSection = () => {
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
   return (
-    <section className="container py-8" aria-labelledby="why-read-title">
+    <section
+      className="container max-w-6xl py-8"
+      aria-labelledby="why-read-title"
+    >
       <h2
         id="why-read-title"
         className="font-display pb-6 text-3xl leading-snug md:text-4xl"
@@ -16,7 +33,7 @@ export const WhyReadSection = () => {
         an Essential Read!
       </h2>
       <div
-        className="grid grid-cols-1 gap-4 pb-6 md:grid-cols-2 md:gap-9"
+        className="grid grid-cols-1 gap-4 pb-12 md:grid-cols-2 md:gap-9"
         role="list"
       >
         <ul className="list-disc space-y-4 pl-6" role="list">
@@ -51,16 +68,30 @@ export const WhyReadSection = () => {
           </li>
         </ul>
       </div>
-      <div className="relative aspect-video">
-        <Image
-          src="/dubai-museum.webp"
-          alt="Dubai Museum showcasing the city's architectural and cultural evolution"
-          fill
-          className="rounded-2xl object-cover"
-          quality={100}
-          sizes="(max-width: 768px) 100vw, 1200px"
-        />
-      </div>
+
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-full"
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+      >
+        <CarouselContent>
+          {Array.from({ length: 5 }).map((_, index) => (
+            <CarouselItem key={index}>
+              <div className="relative aspect-video p-1">
+                <Image
+                  src="/dubai-museum.webp"
+                  alt="Dubai Museum showcasing the city's architectural and cultural evolution"
+                  fill
+                  className="rounded-2xl object-cover"
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, 1200px"
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </section>
   );
 };

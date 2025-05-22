@@ -4,7 +4,7 @@ import { Amazon, AmazonKindle } from "@/assets/brand-logos";
 
 const AvailabilitySection = memo(function AvailabilitySection() {
   return (
-    <section aria-labelledby="availability-title" className="pt-6 pb-12">
+    <section aria-labelledby="availability-title" className="pt-6 pb-20">
       <h3
         id="availability-title"
         className="font-display mb-4 text-center text-xl"
