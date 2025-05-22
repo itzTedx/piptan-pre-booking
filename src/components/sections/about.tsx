@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
 
+import { ShineBorder } from "../animation/shine-border";
 import { Button } from "../ui/button";
 import {
   Card,
@@ -45,7 +46,8 @@ function AboutSection() {
             </li>
           ))}
         </ul>
-        <Card className="max-w-3xl gap-4 md:gap-5">
+        <Card className="relative w-full max-w-3xl gap-4 overflow-hidden md:gap-5">
+          <ShineBorder shineColor={["#37D787", "#3CD08D", "#FFBE7B"]} />
           <CardHeader className="pb-0 text-[#37D787]">
             <p className="pb-2 tracking-wide md:pb-3">
               Unlock Dubai&apos; Growth

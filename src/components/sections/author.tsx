@@ -78,7 +78,7 @@ export const AuthorSection = () => {
       <div className="relative col-span-6 hidden md:block lg:col-span-4">
         <Image
           src="/shashi.webp"
-          alt="Portrait of Shashi P. Piptan"
+          alt="Portrait of Shashi s. Piptan"
           fill
           sizes="(min-width: 768px) 33vw, 0vw"
           className="object-cover"
