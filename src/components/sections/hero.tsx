@@ -28,8 +28,8 @@ export default function HeroSection() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(bookMetadata) }}
       />
-      <div className="relative container grid grid-cols-1 gap-3 pt-20 lg:grid-cols-3 lg:pt-24">
-        <header className="s absolute inset-x-0 top-9 text-center lg:top-12">
+      <div className="relative container grid grid-cols-1 gap-3 pt-20 lg:grid-cols-3 lg:pt-28">
+        <header className="s absolute inset-x-0 top-9 text-center lg:top-16">
           <h1
             className="font-display text-2xl font-light md:text-4xl lg:text-[5rem]"
             itemProp="name"
@@ -37,7 +37,7 @@ export default function HeroSection() {
             Launching Soon
           </h1>
         </header>
-        <div className="md:self-end lg:pb-20">
+        <div className="md:self-end lg:pb-10">
           <h2
             className="font-grotesk text-3xl max-lg:text-center md:text-4xl/11"
             itemProp="alternativeHeadline"
@@ -94,7 +94,7 @@ export default function HeroSection() {
             <Image src="/books.webp" alt="" height={1342} width={1510} />
           </div> */}
         </div>
-        <div className="z-10 self-end pb-20">
+        <div className="z-10 self-end pb-10">
           <p className="font-grotesk text-lg" itemProp="description">
             Explore Dubai&apos;s transformation through expert insights and
             proven strategies for investors seeking high returns in real estate,

@@ -22,7 +22,7 @@ export const WhyReadSection = () => {
     >
       <h2
         id="why-read-title"
-        className="font-display pb-6 text-3xl leading-snug md:text-4xl"
+        className="font-display pb-9 text-3xl leading-snug text-balance md:text-4xl"
       >
         What makes{" "}
         <span className="text-[#37D787]">
@@ -33,38 +33,47 @@ export const WhyReadSection = () => {
         an Essential Read!
       </h2>
       <div
-        className="grid grid-cols-1 gap-4 pb-12 md:grid-cols-2 md:gap-9"
+        className="grid grid-cols-1 gap-4 pb-12 md:grid-cols-2 md:gap-12"
         role="list"
       >
-        <ul className="list-disc space-y-4 pl-6" role="list">
+        <ul
+          className="list-disc space-y-4 pl-6 leading-relaxed font-light"
+          role="list"
+        >
           <li>
-            Investment-Focused Insights - Learn where the real opportunities for
-            high returns lie in Dubai&apos;s evolving infrastructure landscape.
+            <span className="font-semibold">Investment-Focused Insights</span> -
+            Learn where the real opportunities for high returns lie in
+            Dubai&apos;s evolving infrastructure landscape.
           </li>
           <li>
-            Expert Contributions - Gain perspectives from industry leaders, real
-            estate professionals, and urban planners actively shaping
-            Dubai&apos;s future.
+            <span className="font-semibold">Expert Contributions</span> - Gain
+            perspectives from industry leaders, real estate professionals, and
+            urban planners actively shaping Dubai&apos;s future.
           </li>
           <li>
-            Data-Driven Analysis - Explore well-researched case studies,
-            statistics, and trends that drive smart investment decisions.
+            <span className="font-semibold">Data-Driven Analysis</span> -
+            Explore well-researched case studies, statistics, and trends that
+            drive smart investment decisions.
           </li>
         </ul>
-        <ul className="list-disc space-y-4 pl-6" role="list">
+        <ul
+          className="list-disc space-y-4 pl-6 leading-relaxed font-light"
+          role="list"
+        >
           <li>
-            Covers Regulatory Frameworks - Navigate Dubai&apos;s
-            investor-friendly policies, legal systems, and development codes
-            with clarity.
+            <span className="font-semibold">Covers Regulatory Frameworks</span>{" "}
+            - Navigate Dubai&apos;s investor-friendly policies, legal systems,
+            and development codes with clarity.
           </li>
           <li>
-            Future-Ready Forecasts - Discover what&apos;s next for Dubai and
-            where new growth corridors and emerging sectors are headed.
+            <span className="font-semibold">Future-Ready Forecasts</span> -
+            Discover what&apos;s next for Dubai and where new growth corridors
+            and emerging sectors are headed.
           </li>
           <li>
-            Written by a Seasoned Insider - Authored by a global investment
-            advisor with firsthand experience in infrastructure and corporate
-            liaisoning.
+            <span className="font-semibold">Written by a Seasoned Insider</span>{" "}
+            - Authored by a global investment advisor with firsthand experience
+            in infrastructure and corporate liaisoning.
           </li>
         </ul>
       </div>
@@ -82,7 +91,7 @@ export const WhyReadSection = () => {
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index}>
-              <div className="relative aspect-video p-1">
+              <div className="relative aspect-16/8 p-1">
                 <Image
                   src="/dubai-museum.webp"
                   alt="Dubai Museum showcasing the city's architectural and cultural evolution"
