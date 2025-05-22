@@ -144,8 +144,8 @@
 }
 
 .book-container {
-  --book-width: 350px;
-  --book-height: 500px;
+  --book-width: 335px;
+  --book-height: 459px;
 
   @media (width >= 64rem /* 1024px */) {
     --book-width: 320px;
@@ -153,7 +153,7 @@
   }
 
   @media (width >= 80rem /* 1280px */) {
-    --book-width: 380px;
+    --book-width: 390px;
     --book-height: 530px;
   }
 
