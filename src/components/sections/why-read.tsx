@@ -71,7 +71,11 @@ export const WhyReadSection = () => {
 
       <Carousel
         plugins={[plugin.current]}
-        className="w-full"
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full rounded-2xl"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
@@ -83,7 +87,7 @@ export const WhyReadSection = () => {
                   src="/dubai-museum.webp"
                   alt="Dubai Museum showcasing the city's architectural and cultural evolution"
                   fill
-                  className="rounded-2xl object-cover"
+                  className="rounded-2xl border object-cover shadow-2xl"
                   quality={100}
                   sizes="(max-width: 768px) 100vw, 1200px"
                 />
