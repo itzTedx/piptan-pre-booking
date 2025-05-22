@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { TextAnimate } from "../animation/text-animate";
+import { HeroHeading } from "../atom/heading";
 import { Button } from "../ui/button";
 
 export default function HeroSection() {
@@ -30,21 +32,26 @@ export default function HeroSection() {
       />
       <div className="relative container grid grid-cols-1 gap-3 pt-20 lg:grid-cols-3 lg:pt-28">
         <header className="s absolute inset-x-0 top-9 text-center lg:top-16">
-          <h1
-            className="font-display text-2xl font-light md:text-4xl lg:text-[5rem]"
-            itemProp="name"
-          >
-            Launching Soon
-          </h1>
+          <HeroHeading />
         </header>
         <div className="md:self-end lg:pb-10">
-          <h2
+          <TextAnimate
+            animation="fadeIn"
+            by="line"
+            as="h2"
+            className="font-grotesk text-3xl max-lg:text-center md:text-4xl/11"
+            delay={0.3}
+            once
+          >
+            {`Discover the visionary\n\nstrategies behind one of the\n\nworld's most iconic and dynamic cities.`}
+          </TextAnimate>
+          {/* <h2
             className="font-grotesk text-3xl max-lg:text-center md:text-4xl/11"
             itemProp="alternativeHeadline"
           >
             Discover the visionary strategies behind one of the world&apos;s
             most iconic and dynamic cities.
-          </h2>
+          </h2> */}
         </div>
         <div className="book-container" aria-label="Book preview">
           <article className="book" role="presentation">
@@ -95,11 +102,21 @@ export default function HeroSection() {
           </div> */}
         </div>
         <div className="z-10 self-end pb-10">
-          <p className="font-grotesk text-lg" itemProp="description">
+          <TextAnimate
+            animation="fadeIn"
+            by="line"
+            as="p"
+            className="font-grotesk text-lg"
+            delay={0.4}
+            once
+          >
+            {`Explore Dubai's transformation through expert insights\n\nand proven strategies for investors seeking high returns\n\nin real estate, infrastructure, and urban development.\n\nYour roadmap starts here!`}
+          </TextAnimate>
+          {/* <p className="font-grotesk text-lg" itemProp="description">
             Explore Dubai&apos;s transformation through expert insights and
             proven strategies for investors seeking high returns in real estate,
             infrastructure, and urban development. Your roadmap starts here!
-          </p>
+          </p> */}
           <div className="flex items-center gap-6 pt-4">
             <Button variant="secondary" asChild>
               <Link href="#pre-order" aria-label="Pre-order the book now">
