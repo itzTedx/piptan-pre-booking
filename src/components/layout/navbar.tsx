@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <header className="fixed top-0 z-50 w-full">
       <div
-        className="from-background to-background/0 absolute h-full w-full bg-gradient-to-b"
+        className="from-background to-background/0 absolute z-10 h-full w-full bg-gradient-to-b"
         aria-hidden="true"
       />
       <nav
@@ -27,6 +27,14 @@ export const Navbar = () => {
           <Link href="#pre-order">Pre-Order Now</Link>
         </Button>
       </nav>
+      <div className="gradient-blur">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </header>
   );
 };

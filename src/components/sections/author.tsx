@@ -59,7 +59,7 @@ export const AuthorSection = () => {
               the global investment community.
             </p>
             <p className="leading-loose text-pretty">
-              Shashi’s deep understanding of market dynamics, regulatory
+              Shashi&apos;s deep understanding of market dynamics, regulatory
               frameworks, and future-ready infrastructure makes him uniquely
               positioned to guide investors through complex landscapes. His
               hands-on experience and expansive network enable him to create
@@ -70,7 +70,7 @@ export const AuthorSection = () => {
               As the author of The Urban Evolution of Dubai: A Blueprint for
               Infrastructure Investment, Shashi brings together his years of
               field expertise, offering readers an actionable roadmap to one of
-              the world’s most dynamic investment destinations.
+              the world&apos;s most dynamic investment destinations.
             </p>
           </div>
         </div>
