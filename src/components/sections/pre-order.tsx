@@ -27,7 +27,7 @@ export default function PreOrderSection() {
         >
           Stay Updated on the Launch!
         </h3>
-        <p className="font-grotesk mt-4 md:text-lg md:leading-loose">
+        <p className="font-grotesk mt-2 font-light md:text-xl md:leading-snug">
           Submit your email to be notified when Dubai&apos;s Urban Evolution by
           Shashi S. Piptan is available on Amazon.
         </p>

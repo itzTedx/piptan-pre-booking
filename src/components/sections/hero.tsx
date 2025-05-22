@@ -13,7 +13,7 @@ export default function HeroSection() {
     image: "/cover.webp",
     author: {
       "@type": "Person",
-      name: "Author Name", // Replace with actual author name
+      name: "Shashi S. Piptan",
     },
   };
 

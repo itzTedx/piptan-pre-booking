@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -24,6 +25,8 @@ const formSchema = z.object({
 });
 
 export function PreOrderForm() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -37,7 +40,21 @@ export function PreOrderForm() {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+    setIsSubmitted(true);
   }
+
+  if (isSubmitted) {
+    return (
+      <div className="pt-9 text-center">
+        <h3 className="text-primary mb-2 text-2xl font-semibold">Thank You!</h3>
+        <p className="text-slate-600">
+          We&apos;ve received your pre-order request. We&apos;ll keep you
+          updated on our launch progress.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="pt-9">
@@ -63,7 +80,7 @@ export function PreOrderForm() {
           <Button type="submit">Pre-Order Now</Button>
         </div>
 
-        <p className="text-sm font-light">
+        <p className="mt-2.5 text-xs">
           We respect your privacy. Your email will only be used to send launch
           updates. See our <Link href="/privacy">Privacy Policy.</Link>
         </p>
