@@ -19,9 +19,11 @@ import {
 import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
-  email: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
+  email: z
+    .string()
+    .min(2, "Email must be at least 2 characters.")
+    .email("Invalid email address.")
+    .nonempty("Email is required."),
 });
 
 export function PreOrderForm() {
