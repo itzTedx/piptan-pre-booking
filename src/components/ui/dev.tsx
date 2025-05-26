@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export const DevMode = () => {
   const isDevelopment = process.env.NODE_ENV === "development";
   useEffect(() => {
-    if (isDevelopment) {
+    if (!isDevelopment) {
       console.group("Hello World!");
       console.log(
         `%c🚀 Powered by Ziron Media — Your Digital Marketing Partner`,
