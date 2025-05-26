@@ -17,7 +17,7 @@ export const DevMode = () => {
       );
       console.groupEnd();
     }
-  }, []);
+  }, [isDevelopment]);
 
   return null;
 };
