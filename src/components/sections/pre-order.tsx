@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 import { PreOrderForm } from "../form/pre-order-form";
 
@@ -10,7 +10,7 @@ export default function PreOrderSection() {
       aria-labelledby="pre-order-heading"
     >
       <div className="relative max-md:aspect-video">
-        <Image
+        <ExportedImage
           src="/burj-khalifa.webp"
           alt="Burj Khalifa Dubai skyline view"
           fill

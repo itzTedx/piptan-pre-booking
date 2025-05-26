@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 import { Separator } from "../ui/separator";
 
@@ -24,14 +24,12 @@ export const AuthorSection = () => {
               </h4>
             </div>
             <div className="absolute -top-20 right-0 aspect-[4/5] w-1/2 md:hidden">
-              <Image
+              <ExportedImage
                 src="/shashi.webp"
                 alt="Shashi S. Piptan - Global Investment Advisor"
                 fill
                 sizes="(max-width: 768px) 50vw, 0vw"
                 className="object-cover"
-                priority={false}
-                loading="lazy"
               />
             </div>
           </div>
@@ -76,14 +74,13 @@ export const AuthorSection = () => {
         </div>
       </div>
       <div className="relative col-span-6 hidden md:block lg:col-span-4">
-        <Image
+        <ExportedImage
           src="/shashi.webp"
           alt="Portrait of Shashi s. Piptan"
           fill
           sizes="(min-width: 768px) 33vw, 0vw"
           className="object-cover"
           priority={true}
-          quality={90}
         />
       </div>
     </section>

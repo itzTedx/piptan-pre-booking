@@ -1,6 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
+
+import ExportedImage from "next-image-export-optimizer";
 
 import { ShineBorder } from "../animation/shine-border";
 import { Button } from "../ui/button";
@@ -92,14 +93,13 @@ function AboutSection() {
           </CardFooter>
         </Card>
       </div>
-      <Image
+      <ExportedImage
         src="/book-mockup.webp"
         alt="3D mockup of the book 'Blueprint for Infrastructure Investment'"
         className="-z-10 object-contain object-left max-md:object-bottom md:object-cover"
         fill
         priority
         sizes="100vw"
-        quality={100}
       />
     </section>
   );

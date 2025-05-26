@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+
+import ExportedImage from "next-image-export-optimizer";
 
 import { TextAnimate } from "../animation/text-animate";
 import { HeroHeading } from "../atom/heading";
@@ -57,7 +58,7 @@ export default function HeroSection() {
           <article className="book" role="presentation">
             <div className="front">
               <div className="cover">
-                <Image
+                <ExportedImage
                   src="/gold-cover.webp"
                   alt="Dubai Urban Development Strategy Book Cover"
                   fill
@@ -66,11 +67,10 @@ export default function HeroSection() {
                   className="gold-cover z-10 object-cover"
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                   itemProp="image"
-                  quality={90}
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4bHRsbHiUgJSgwVz1AMkE1QkhYWE9eSVJMYklWWl1fZGRxc359g3NgfWZ1a19n/9j/"
                 />
-                <Image
+                <ExportedImage
                   src="/cover.webp"
                   alt="Dubai Urban Development Strategy Book Cover"
                   fill
@@ -79,27 +79,22 @@ export default function HeroSection() {
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                   itemProp="image"
-                  quality={90}
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4bHRsbHiUgJSgwVz1AMkE1QkhYWE9eSVJMYklWWl1fZGRxc359g3NgfWZ1a19n/9j/"
                 />
               </div>
             </div>
             <div className="left-side" aria-hidden="true">
-              <Image
+              <ExportedImage
                 src="/side.webp"
                 alt=""
                 fill
                 priority
                 className="object-cover"
                 sizes="50px"
-                quality={75}
               />
             </div>
           </article>
-          {/* <div className="absolute inset-x-0 -bottom-1/2 -z-10 -translate-y-1/4">
-            <Image src="/books.webp" alt="" height={1342} width={1510} />
-          </div> */}
         </div>
         <div className="z-10 self-end pb-10">
           <TextAnimate
@@ -131,14 +126,13 @@ export default function HeroSection() {
       </div>
       <picture>
         <source srcSet="/due-bg.webp" type="image/webp" />
-        <Image
+        <ExportedImage
           src="/due-bg.jpg"
           alt=""
           fill
           fetchPriority="low"
           className="-z-20 object-cover opacity-20"
           sizes="100vw"
-          quality={60}
           loading="lazy"
           aria-hidden="true"
         />
