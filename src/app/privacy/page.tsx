@@ -40,7 +40,7 @@ export default function PrivacyPage() {
           <ul className="list-disc pl-6">
             <li>
               Sending notifications about the launch of Dubai&apos;s Urban
-              Evolution by Shashi P. Piptan.
+              Evolution by Shashi S. Piptan.
             </li>
             <li>Providing occasional updates related to the book release.</li>
             <li>We do not send promotional emails unrelated to this book.</li>

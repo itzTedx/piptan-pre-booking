@@ -20,13 +20,13 @@ export const AuthorSection = () => {
               </h3>
               <Separator />
               <h4 className="font-display text-3xl leading-tight text-[#37D787] md:hidden">
-                Shashi P. Piptan
+                Shashi S. Piptan
               </h4>
             </div>
             <div className="absolute -top-20 right-0 aspect-[4/5] w-1/2 md:hidden">
               <Image
                 src="/shashi.webp"
-                alt="Shashi P. Piptan - Global Investment Advisor"
+                alt="Shashi S. Piptan - Global Investment Advisor"
                 fill
                 sizes="(max-width: 768px) 50vw, 0vw"
                 className="object-cover"
@@ -41,13 +41,13 @@ export const AuthorSection = () => {
           </h4>
           <div className="space-y-3 text-sm font-light md:space-y-4 lg:text-base">
             <p className="leading-loose text-pretty">
-              Shashi Piptan is a seasoned Global Investment Advisor with a sharp
-              focus on infrastructure development, real estate strategy, and
-              international business growth. With over a decade of experience in
-              corporate liaising and infrastructural negotiation, Shashi has
-              successfully advised governments, multinational corporations, and
-              private investors on high-stakes projects across the Middle East,
-              Asia, and Europe.
+              Shashi S. Piptan is a seasoned Global Investment Advisor with a
+              sharp focus on infrastructure development, real estate strategy,
+              and international business growth. With over a decade of
+              experience in corporate liaising and infrastructural negotiation,
+              Shashi has successfully advised governments, multinational
+              corporations, and private investors on high-stakes projects across
+              the Middle East, Asia, and Europe.
             </p>
             <p className="leading-loose text-pretty">
               Known for his strategic insight and practical approach, Shashi
