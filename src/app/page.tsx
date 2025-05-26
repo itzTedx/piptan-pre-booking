@@ -20,7 +20,7 @@ const siteConfig = {
     "Book",
   ],
 
-  url: "https://piptan-pre-booking.vercel.app/",
+  url: "http://www.infraguideuae.com",
 };
 
 // JSON-LD Schema
