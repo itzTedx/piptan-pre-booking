@@ -32,14 +32,8 @@ export const WhyReadSection = () => {
         </span>{" "}
         an Essential Read!
       </h2>
-      <div
-        className="grid grid-cols-1 gap-4 pb-12 md:grid-cols-2 md:gap-12"
-        role="list"
-      >
-        <ul
-          className="list-disc space-y-4 pl-6 leading-relaxed font-light"
-          role="list"
-        >
+      <div className="grid grid-cols-1 gap-4 pb-12 md:grid-cols-2 md:gap-12">
+        <ul className="list-disc space-y-4 pl-6 leading-relaxed font-light">
           <li>
             <span className="font-semibold">Investment-Focused Insights</span> -
             Learn where the real opportunities for high returns lie in
@@ -56,10 +50,7 @@ export const WhyReadSection = () => {
             drive smart investment decisions.
           </li>
         </ul>
-        <ul
-          className="list-disc space-y-4 pl-6 leading-relaxed font-light"
-          role="list"
-        >
+        <ul className="list-disc space-y-4 pl-6 leading-relaxed font-light">
           <li>
             <span className="font-semibold">Covers Regulatory Frameworks</span>{" "}
             - Navigate Dubai&apos;s investor-friendly policies, legal systems,
