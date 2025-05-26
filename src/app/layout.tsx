@@ -4,6 +4,7 @@ import { excrallik, plusJakarta, radioGrostek } from "@/assets/fonts";
 import BreakpointIndicator from "@/components/breakpoin-indicator";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import { DevMode } from "@/components/ui/dev";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
@@ -43,6 +44,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <BreakpointIndicator />
+        <DevMode />
       </body>
     </html>
   );
