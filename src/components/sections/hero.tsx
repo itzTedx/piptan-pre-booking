@@ -1,6 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-
-import ExportedImage from "next-image-export-optimizer";
 
 import { TextAnimate } from "../animation/text-animate";
 import { HeroHeading } from "../atom/heading";
@@ -58,34 +57,28 @@ export default function HeroSection() {
           <article className="book" role="presentation">
             <div className="front">
               <div className="cover">
-                <ExportedImage
+                <Image
                   src="/gold-cover.webp"
                   alt="Dubai Urban Development Strategy Book Cover"
                   fill
                   priority
-                  fetchPriority="high"
                   className="gold-cover z-10 object-cover"
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                   itemProp="image"
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4bHRsbHiUgJSgwVz1AMkE1QkhYWE9eSVJMYklWWl1fZGRxc359g3NgfWZ1a19n/9j/"
                 />
-                <ExportedImage
+                <Image
                   src="/cover.webp"
                   alt="Dubai Urban Development Strategy Book Cover"
                   fill
                   priority
-                  fetchPriority="high"
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                   itemProp="image"
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4bHRsbHiUgJSgwVz1AMkE1QkhYWE9eSVJMYklWWl1fZGRxc359g3NgfWZ1a19n/9j/"
                 />
               </div>
             </div>
             <div className="left-side" aria-hidden="true">
-              <ExportedImage
+              <Image
                 src="/side.webp"
                 alt=""
                 fill
@@ -126,11 +119,10 @@ export default function HeroSection() {
       </div>
       <picture>
         <source srcSet="/due-bg.webp" type="image/webp" />
-        <ExportedImage
+        <Image
           src="/due-bg.jpg"
           alt=""
           fill
-          fetchPriority="low"
           className="-z-20 object-cover opacity-20"
           sizes="100vw"
           loading="lazy"

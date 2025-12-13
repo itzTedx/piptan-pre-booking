@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 import Autoplay from "embla-carousel-autoplay";
-import ExportedImage from "next-image-export-optimizer";
 
 import {
   Carousel,
@@ -83,7 +83,7 @@ export const WhyReadSection = () => {
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index}>
               <div className="relative aspect-16/8 p-1">
-                <ExportedImage
+                <Image
                   src="/dubai-museum.webp"
                   alt="Dubai Museum showcasing the city's architectural and cultural evolution"
                   fill
