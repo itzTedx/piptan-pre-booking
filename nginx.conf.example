@@ -1,12 +1,20 @@
-# Nginx configuration for piptan-pre-booking
-# Copy this to /etc/nginx/sites-available/piptan-pre-booking
-# Then create a symlink: sudo ln -s /etc/nginx/sites-available/piptan-pre-booking /etc/nginx/sites-enabled/
+# Nginx configuration for static export (Next.js)
+# Copy this to /etc/nginx/sites-available/your-site-name
+# Then create a symlink: sudo ln -s /etc/nginx/sites-available/your-site-name /etc/nginx/sites-enabled/
 
+# HTTPS Server Block (managed by Certbot)
 server {
-    listen 80;
-    server_name your-domain.com www.your-domain.com;  # Replace with your domain or IP
+    listen 443 ssl http2;
+    server_name infraguideuae.com www.infraguideuae.com; 
 
-    root /var/www/piptan-pre-booking/out;
+    # SSL Configuration (managed by Certbot)
+    ssl_certificate /etc/letsencrypt/live/infraguideuae.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/infraguideuae.com/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    # Root directory for static files
+    root /var/www/piptan-pre-booking/out;  # Update path to your static export directory
     index index.html;
 
     # Gzip compression
@@ -30,12 +38,13 @@ server {
     add_header X-XSS-Protection "1; mode=block" always;
     add_header Referrer-Policy "no-referrer-when-downgrade" always;
 
-    # Cache static assets
+    # Cache static assets - Next.js chunks
     location /_next/static/ {
         expires 365d;
         add_header Cache-Control "public, immutable";
     }
 
+    # Cache optimized images
     location /nextImageExportOptimizer/ {
         expires 365d;
         add_header Cache-Control "public, immutable";
@@ -47,7 +56,7 @@ server {
         add_header Cache-Control "public, immutable";
     }
 
-    # Main location block - handle Next.js routing
+    # Main location block - handle Next.js static routing
     location / {
         try_files $uri $uri.html $uri/ =404;
     }
@@ -66,26 +75,19 @@ server {
     }
 }
 
-# SSL Configuration (uncomment after setting up SSL with Certbot)
-# server {
-#     listen 443 ssl http2;
-#     server_name your-domain.com www.your-domain.com;
-# 
-#     ssl_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem;
-#     ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
-#     ssl_protocols TLSv1.2 TLSv1.3;
-#     ssl_ciphers HIGH:!aNULL:!MD5;
-# 
-#     root /var/www/piptan-pre-booking/out;
-#     index index.html;
-# 
-#     # ... (same configuration as above)
-# }
-# 
-# # Redirect HTTP to HTTPS
-# server {
-#     listen 80;
-#     server_name your-domain.com www.your-domain.com;
-#     return 301 https://$server_name$request_uri;
-# }
+# HTTP to HTTPS Redirect (managed by Certbot)
+server {
+    listen 80;
+    server_name infraguideuae.com www.infraguideuae.com;  # Replace with your domain
 
+    # Redirect www to non-www (or vice versa)
+    if ($host = www.infraguideuae.com) {
+        return 301 https://$host$request_uri;
+    }
+    if ($host = infraguideuae.com) {
+        return 301 https://$host$request_uri;
+    }
+
+    # Fallback 404 for other requests
+    return 404;
+}
