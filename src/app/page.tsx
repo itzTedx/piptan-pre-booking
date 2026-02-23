@@ -67,11 +67,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.url,
   },
+  verification: {
+    google: "E-Yn2lkxHja71MauCBAt0O7Oob8zKAs0yRKnSaV29fs"
+  },
   other: {
     "script:ld+json": JSON.stringify(jsonLd),
   },
 };
-
+<meta name="google-site-verification" content="E-Yn2lkxHja71MauCBAt0O7Oob8zKAs0yRKnSaV29fs" />
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">

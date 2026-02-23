@@ -45,13 +45,7 @@ export default function HeroSection() {
           >
             {`Discover the visionary\n\nstrategies behind one of the\n\nworld's most iconic and dynamic cities.`}
           </TextAnimate>
-          {/* <h2
-            className="font-grotesk text-3xl max-lg:text-center md:text-4xl/11"
-            itemProp="alternativeHeadline"
-          >
-            Discover the visionary strategies behind one of the world&apos;s
-            most iconic and dynamic cities.
-          </h2> */}
+         
         </div>
         <div className="book-container" aria-label="Book preview">
           <article className="book" role="presentation">
