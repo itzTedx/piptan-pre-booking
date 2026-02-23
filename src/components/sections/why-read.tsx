@@ -13,7 +13,7 @@ import {
 
 export const WhyReadSection = () => {
 	const plugin = React.useRef(
-		Autoplay({ delay: 5000, stopOnInteraction: true }),
+		Autoplay({ delay: 5000, stopOnInteraction: true })
 	);
 	return (
 		<section

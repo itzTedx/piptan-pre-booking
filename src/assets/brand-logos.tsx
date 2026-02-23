@@ -1,7 +1,7 @@
 import { JSX, SVGProps } from "react";
 
 export const Amazon = (
-	props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
+	props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
 ) => {
 	return (
 		<svg
@@ -61,7 +61,7 @@ export const Amazon = (
 };
 
 export const AmazonKindle = (
-	props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
+	props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
 ) => {
 	return (
 		<svg

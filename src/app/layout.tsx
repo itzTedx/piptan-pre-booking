@@ -42,7 +42,7 @@ export default function RootLayout({
 					plusJakarta.className,
 					excrallik.variable,
 					radioGrostek.variable,
-					"antialiased",
+					"antialiased"
 				)}
 			>
 				<Navbar />

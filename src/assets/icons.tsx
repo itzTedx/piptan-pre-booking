@@ -1,7 +1,7 @@
 import { JSX, SVGProps } from "react";
 
 export const IconBrandFacebook = (
-	props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
+	props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
 ) => {
 	return (
 		<svg
@@ -22,7 +22,7 @@ export const IconBrandFacebook = (
 };
 
 export const IconBrandInstagram = (
-	props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
+	props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
 ) => {
 	return (
 		<svg
@@ -42,7 +42,7 @@ export const IconBrandInstagram = (
 	);
 };
 export const IconBrandLinkedin = (
-	props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
+	props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
 ) => {
 	return (
 		<svg

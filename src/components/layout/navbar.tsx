@@ -8,36 +8,36 @@ export const Navbar = () => {
 	return (
 		<header className="fixed top-0 z-50 w-full">
 			<div
-				className="from-background to-background/0 absolute z-10 h-full w-full bg-linear-to-b"
 				aria-hidden="true"
+				className="absolute z-10 h-full w-full bg-linear-to-b from-background to-background/0"
 			/>
 			<nav
-				className="relative z-50 container flex items-center-safe justify-between py-4"
 				aria-label="Main navigation"
+				className="items-center-safe container relative z-50 flex justify-between py-4"
 			>
 				<Link
-					href="/"
-					className="flex items-center"
 					aria-label="Infra Guide UAE — home"
+					className="flex items-center"
+					href="/"
 				>
 					<Logo className="size-auto md:size-20" />
 				</Link>
-				<Button variant="secondary" asChild>
+				<Button asChild variant="secondary">
 					<Link
-						href="#pre-order"
 						aria-label="Pre-order Dubai's Urban Evolution"
+						href="#pre-order"
 					>
 						Pre-Order Now
 					</Link>
 				</Button>
 			</nav>
 			<div className="gradient-blur">
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
+				<div />
+				<div />
+				<div />
+				<div />
+				<div />
+				<div />
 			</div>
 		</header>
 	);
