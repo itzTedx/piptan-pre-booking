@@ -7,18 +7,18 @@ export const HeroHeading = () => {
 		<div className="space-y-1">
 			<TextAnimate
 				animation="slideUp"
-				by="character"
 				as="h1"
+				by="character"
+				className="font-display font-light text-2xl md:text-4xl lg:text-[5rem]"
 				id="hero-title"
-				className="font-display text-2xl font-light md:text-4xl lg:text-[5rem]"
 			>
 				Dubai&apos;s Urban Evolution
 			</TextAnimate>
 			<TextAnimate
 				animation="slideUp"
-				by="word"
 				as="p"
-				className="font-grotesk text-lg font-light text-muted-foreground md:text-xl"
+				by="word"
+				className="font-grotesk font-light text-lg text-muted-foreground md:text-xl"
 				delay={0.15}
 			>
 				Launching Soon

@@ -13,47 +13,47 @@ const currentYear = new Date().getFullYear();
 
 export const Footer = () => {
 	return (
-		<footer className="text-primary container max-w-7xl rounded-t-4xl bg-black shadow-2xl md:px-12">
+		<footer className="container max-w-7xl rounded-t-4xl bg-black text-primary shadow-2xl md:px-12">
 			<div className="grid grid-cols-3 gap-4 pt-12 pb-4">
 				<Link
-					href="/"
 					aria-label="Infra Guide UAE — home"
 					className="text-foreground"
+					href="/"
 				>
 					<Logo className="text-foreground" />
 				</Link>
 
 				<nav aria-label="Social Media Links" className="justify-self-center">
-					<ul className="text-primary flex items-center gap-4">
+					<ul className="flex items-center gap-4 text-primary">
 						<li>
 							<Link
-								href="https://facebook.com/shashi-piptan"
-								target="_blank"
-								rel="noopener noreferrer"
 								aria-label="Visit our Facebook page"
 								className="transition-colors hover:text-green-500"
+								href="https://facebook.com/shashi-piptan"
+								rel="noopener noreferrer"
+								target="_blank"
 							>
 								<IconBrandFacebook className="size-8" />
 							</Link>
 						</li>
 						<li>
 							<Link
-								href="https://instagram.com/shashi-piptan"
-								target="_blank"
-								rel="noopener noreferrer"
 								aria-label="Visit our Instagram profile"
 								className="transition-colors hover:text-green-500"
+								href="https://instagram.com/shashi-piptan"
+								rel="noopener noreferrer"
+								target="_blank"
 							>
 								<IconBrandInstagram className="size-8" />
 							</Link>
 						</li>
 						<li>
 							<Link
-								href="https://linkedin.com/company/shashi-piptan"
-								target="_blank"
-								rel="noopener noreferrer"
 								aria-label="Visit our LinkedIn page"
 								className="transition-colors hover:text-green-500"
+								href="https://linkedin.com/company/shashi-piptan"
+								rel="noopener noreferrer"
+								target="_blank"
 							>
 								<IconBrandLinkedin className="size-8" />
 							</Link>
@@ -63,25 +63,25 @@ export const Footer = () => {
 				<ScrollToTop />
 			</div>
 
-			<div className="border-primary/20 grid grid-cols-1 items-center border-t py-2 md:grid-cols-3">
+			<div className="grid grid-cols-1 items-center border-primary/20 border-t py-2 md:grid-cols-3">
 				<p className="text-xs max-md:order-3 max-md:pb-1 max-md:text-center">
 					© {currentYear}, Piptan Investment & Securities, All rights reserved
 				</p>
-				<p className="text-muted-foreground/75 text-center text-sm">
+				<p className="text-center text-muted-foreground/75 text-sm">
 					Developed by{" "}
 					<Link
+						aria-label="Website Developed by Ziron media"
+						className="font-semibold hover:underline"
 						href="https://www.zironmedia.com"
 						target="_blank"
-						className="font-semibold hover:underline"
-						aria-label="Website Developed by Ziron media"
 					>
 						Ziron media
 					</Link>
 				</p>
 				<nav aria-label="Footer navigation" className="text-center md:text-end">
 					<Link
-						href="/privacy"
 						className="text-sm transition-colors hover:text-green-500"
+						href="/privacy"
 						title="Read our privacy policy"
 					>
 						Privacy Policy

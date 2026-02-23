@@ -6,10 +6,10 @@ export const Logo = (
 	return (
 		<svg
 			{...props}
-			width="76"
+			fill="none"
 			height="56"
 			viewBox="0 0 76 56"
-			fill="none"
+			width="76"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<g clipPath="url(#clip0_9_14)">
@@ -164,12 +164,12 @@ export const Logo = (
 			</g>
 			<defs>
 				<linearGradient
+					gradientUnits="userSpaceOnUse"
 					id="paint0_linear_9_14"
 					x1="22.3053"
-					y1="0"
 					x2="22.3053"
+					y1="0"
 					y2="56"
-					gradientUnits="userSpaceOnUse"
 				>
 					<stop stopColor="#B3A43D" />
 					<stop offset="0.307692" stopColor="#9F8124" />
@@ -178,7 +178,7 @@ export const Logo = (
 					<stop offset="0.961538" stopColor="#B6A833" />
 				</linearGradient>
 				<clipPath id="clip0_9_14">
-					<rect width="76" height="56" fill="currentColor" />
+					<rect fill="currentColor" height="56" width="76" />
 				</clipPath>
 			</defs>
 		</svg>

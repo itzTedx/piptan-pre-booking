@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function PrivacyPage() {
 	return (
 		<div className="container mx-auto max-w-4xl px-4 py-8 pt-20">
-			<h1 className="mb-8 text-3xl font-bold">Privacy Policy</h1>
+			<h1 className="mb-8 font-bold text-3xl">Privacy Policy</h1>
 
 			<div className="prose prose-lg">
 				<p className="mb-6">
@@ -16,7 +16,7 @@ export default function PrivacyPage() {
 				</p>
 
 				<div className="mb-6">
-					<h2 className="mb-4 text-2xl font-semibold">
+					<h2 className="mb-4 font-semibold text-2xl">
 						1. Information We Collect
 					</h2>
 					<p>We only collect the following information:</p>
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
 				</div>
 
 				<div className="mb-6">
-					<h2 className="mb-4 text-2xl font-semibold">
+					<h2 className="mb-4 font-semibold text-2xl">
 						2. How We Use Your Information
 					</h2>
 					<p>Your email address will be used solely for:</p>
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
 				</div>
 
 				<div className="mb-6">
-					<h2 className="mb-4 text-2xl font-semibold">
+					<h2 className="mb-4 font-semibold text-2xl">
 						3. How We Protect Your Information
 					</h2>
 					<p className="mb-4">
@@ -63,19 +63,19 @@ export default function PrivacyPage() {
 				</div>
 
 				<div className="mb-6">
-					<h2 className="mb-4 text-2xl font-semibold">
+					<h2 className="mb-4 font-semibold text-2xl">
 						4. Sharing of Information
 					</h2>
 					<p>
 						We do not sell, trade, or rent your personal information to third
 						parties. We may use trusted service providers{" "}
-						{`(such as email marketing tools)`} solely to assist us in
+						{"(such as email marketing tools)"} solely to assist us in
 						delivering notifications to you.
 					</p>
 				</div>
 
 				<div className="mb-6">
-					<h2 className="mb-4 text-2xl font-semibold">5. Your Rights</h2>
+					<h2 className="mb-4 font-semibold text-2xl">5. Your Rights</h2>
 					<ul className="list-disc pl-6">
 						<li>
 							Unsubscribe at any time by clicking the unsubscribe link in any
@@ -86,8 +86,8 @@ export default function PrivacyPage() {
 					<p>
 						To exercise these rights, please contact us at{" "}
 						<Link
-							href="mailto:info@piptan.com"
 							className="text-blue-600 hover:underline"
+							href="mailto:info@piptan.com"
 						>
 							info@piptan.com
 						</Link>
@@ -96,7 +96,7 @@ export default function PrivacyPage() {
 				</div>
 
 				<div className="mb-6">
-					<h2 className="mb-4 text-2xl font-semibold">6. Third-Party Links</h2>
+					<h2 className="mb-4 font-semibold text-2xl">6. Third-Party Links</h2>
 					<p>
 						Our website may contain links to external sites (such as Amazon)
 						where the book can be purchased. We are not responsible for the
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
 				</div>
 
 				<div className="mb-6">
-					<h2 className="mb-4 text-2xl font-semibold">
+					<h2 className="mb-4 font-semibold text-2xl">
 						7. Changes to This Privacy Policy
 					</h2>
 					<p>
@@ -116,7 +116,7 @@ export default function PrivacyPage() {
 				</div>
 
 				<div className="mb-6">
-					<h2 className="mb-4 text-2xl font-semibold">8. Contact Us</h2>
+					<h2 className="mb-4 font-semibold text-2xl">8. Contact Us</h2>
 					<p>
 						If you have any questions about this Privacy Policy or how we handle
 						your information, please contact:
@@ -124,8 +124,8 @@ export default function PrivacyPage() {
 					<address className="not-italic">
 						Email:{" "}
 						<Link
-							href="mailto:info@piptan.com"
 							className="text-blue-600 hover:underline"
+							href="mailto:info@piptan.com"
 						>
 							info@piptan.com
 						</Link>

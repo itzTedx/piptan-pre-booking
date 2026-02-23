@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
+
+import Image from "next/image";
 
 import Autoplay from "embla-carousel-autoplay";
 
@@ -17,12 +18,12 @@ export const WhyReadSection = () => {
 	);
 	return (
 		<section
-			className="container max-w-6xl py-8"
 			aria-labelledby="why-read-title"
+			className="container max-w-6xl py-8"
 		>
 			<h2
+				className="text-balance pb-9 font-display text-3xl leading-snug md:text-4xl"
 				id="why-read-title"
-				className="font-display pb-9 text-3xl leading-snug text-balance md:text-4xl"
 			>
 				What makes{" "}
 				<span className="text-[#37D787]">
@@ -34,8 +35,8 @@ export const WhyReadSection = () => {
 			</h2>
 			<div className="grid grid-cols-1 gap-4 pb-12 md:grid-cols-2 md:gap-12">
 				<ul
-					className="list-disc space-y-4 pl-6 leading-relaxed font-light"
 					aria-label="Reasons to read: insights and expertise"
+					className="list-disc space-y-4 pl-6 font-light leading-relaxed"
 				>
 					<li>
 						<span className="font-semibold">Investment-Focused Insights</span> -
@@ -54,8 +55,8 @@ export const WhyReadSection = () => {
 					</li>
 				</ul>
 				<ul
-					className="list-disc space-y-4 pl-6 leading-relaxed font-light"
 					aria-label="Reasons to read: frameworks and author"
+					className="list-disc space-y-4 pl-6 font-light leading-relaxed"
 				>
 					<li>
 						<span className="font-semibold">Covers Regulatory Frameworks</span>{" "}
@@ -76,25 +77,25 @@ export const WhyReadSection = () => {
 			</div>
 
 			<Carousel
-				plugins={[plugin.current]}
+				className="w-full rounded-2xl"
+				onMouseEnter={plugin.current.stop}
+				onMouseLeave={plugin.current.reset}
 				opts={{
 					align: "start",
 					loop: true,
 				}}
-				className="w-full rounded-2xl"
-				onMouseEnter={plugin.current.stop}
-				onMouseLeave={plugin.current.reset}
+				plugins={[plugin.current]}
 			>
 				<CarouselContent>
 					{Array.from({ length: 5 }).map((_, index) => (
-						<CarouselItem key={index}>
+						<CarouselItem key={`carousel-item-${index + 1}`}>
 							<div className="relative aspect-16/8 p-1">
 								<Image
-									src="/dubai-museum.webp"
 									alt="Dubai Museum showcasing the city's architectural and cultural evolution"
-									fill
 									className="rounded-2xl border object-cover shadow-2xl"
+									fill
 									sizes="(max-width: 768px) 100vw, 1200px"
+									src="/dubai-museum.webp"
 								/>
 							</div>
 						</CarouselItem>

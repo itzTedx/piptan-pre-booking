@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+
 import AboutSection from "@/components/sections/about";
 import { AuthorSection } from "@/components/sections/author";
 import AvailabilitySection from "@/components/sections/availability";
 import HeroSection from "@/components/sections/hero";
 import PreOrderSection from "@/components/sections/pre-order";
 import { WhyReadSection } from "@/components/sections/why-read";
+
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
 	return (
-		<main id="main-content" className="flex min-h-screen flex-col">
+		<main className="flex min-h-screen flex-col" id="main-content">
 			<HeroSection />
 			<AvailabilitySection />
 			<AboutSection />

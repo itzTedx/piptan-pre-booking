@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+
+import Link from "next/link";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -48,7 +49,7 @@ export function PreOrderForm() {
 	if (isSubmitted) {
 		return (
 			<div className="pt-9 text-center">
-				<h3 className="text-primary mb-2 text-2xl font-semibold">Thank You!</h3>
+				<h3 className="mb-2 font-semibold text-2xl text-primary">Thank You!</h3>
 				<p className="text-slate-600">
 					We&apos;ve received your pre-order request. We&apos;ll keep you
 					updated on our launch progress.
@@ -59,7 +60,7 @@ export function PreOrderForm() {
 
 	return (
 		<Form {...form}>
-			<form onSubmit={form.handleSubmit(onSubmit)} className="pt-9">
+			<form className="pt-9" onSubmit={form.handleSubmit(onSubmit)}>
 				<div className="flex items-end gap-2">
 					<FormField
 						control={form.control}
@@ -69,9 +70,9 @@ export function PreOrderForm() {
 								<FormLabel>Email Address</FormLabel>
 								<FormControl>
 									<Input
+										className="w-full"
 										placeholder="you@example.com"
 										type="email"
-										className="w-full"
 										{...field}
 									/>
 								</FormControl>

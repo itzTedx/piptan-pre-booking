@@ -2,7 +2,7 @@
 
 import { ElementType, memo } from "react";
 
-import { AnimatePresence, MotionProps, Variants, motion } from "motion/react";
+import { AnimatePresence, MotionProps, motion, Variants } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
@@ -64,6 +64,10 @@ interface TextAnimateProps extends MotionProps {
 	 * The animation preset to use
 	 */
 	animation?: AnimationVariant;
+	/**
+	 * The id of the component
+	 */
+	id?: string;
 }
 
 const staggerTimings: Record<AnimationType, number> = {
@@ -311,6 +315,7 @@ const TextAnimateBase = ({
 	once = false,
 	by = "word",
 	animation = "fadeIn",
+	id,
 	...props
 }: TextAnimateProps) => {
 	const MotionComponent = motion.create(Component);
@@ -380,25 +385,26 @@ const TextAnimateBase = ({
 	return (
 		<AnimatePresence mode="popLayout">
 			<MotionComponent
-				variants={finalVariants.container as Variants}
-				initial="hidden"
-				whileInView={startOnView ? "show" : undefined}
 				animate={startOnView ? undefined : "show"}
-				exit="exit"
 				className={cn("whitespace-pre-wrap", className)}
+				exit="exit"
+				id={id}
+				initial="hidden"
+				variants={finalVariants.container as Variants}
 				viewport={{ once }}
+				whileInView={startOnView ? "show" : undefined}
 				{...props}
 			>
 				{segments.map((segment, i) => (
 					<motion.span
-						key={`${by}-${segment}-${i}`}
-						variants={finalVariants.item}
-						custom={i * staggerTimings[by]}
 						className={cn(
 							by === "line" ? "block" : "inline-block whitespace-pre",
 							by === "character" && "",
 							segmentClassName
 						)}
+						custom={i * staggerTimings[by]}
+						key={`${by}-${segment}-${i + 1}`}
+						variants={finalVariants.item}
 					>
 						{segment}
 					</motion.span>

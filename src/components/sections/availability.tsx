@@ -10,35 +10,35 @@ const AvailabilitySection = memo(function AvailabilitySection() {
 			id="availability"
 		>
 			<h2
+				className="mb-4 text-center font-display text-xl"
 				id="availability-title"
-				className="font-display mb-4 text-center text-xl"
 			>
 				Available soon on:
 			</h2>
 			<ul
-				className="flex flex-wrap items-center justify-center gap-3 list-none"
 				aria-label="Where to buy Dubai's Urban Evolution"
+				className="flex list-none flex-wrap items-center justify-center gap-3"
 				itemScope
 				itemType="https://schema.org/ItemList"
 			>
 				<li
-					className="bg-foreground/10 hover:bg-foreground/15 flex h-20 items-center justify-center rounded-xl px-9 transition-colors"
+					className="flex h-20 items-center justify-center rounded-xl bg-foreground/10 px-9 transition-colors hover:bg-foreground/15"
 					itemProp="itemListElement"
 					itemScope
 					itemType="https://schema.org/ListItem"
 				>
-					<span itemProp="name" className="sr-only">
+					<span className="sr-only" itemProp="name">
 						Amazon Books
 					</span>
 					<Amazon aria-hidden="true" className="h-auto w-auto" />
 				</li>
 				<li
-					className="bg-foreground/10 hover:bg-foreground/15 flex h-20 items-center justify-center rounded-xl px-9 transition-colors"
+					className="flex h-20 items-center justify-center rounded-xl bg-foreground/10 px-9 transition-colors hover:bg-foreground/15"
 					itemProp="itemListElement"
 					itemScope
 					itemType="https://schema.org/ListItem"
 				>
-					<span itemProp="name" className="sr-only">
+					<span className="sr-only" itemProp="name">
 						Amazon Kindle
 					</span>
 					<AmazonKindle aria-hidden="true" className="h-auto w-auto" />

@@ -13,27 +13,27 @@ export const ScrollToTop = () => {
 
 	return (
 		<Button
-			variant="outline"
-			size="icon"
-			onClick={scrollToTop}
 			aria-label="Scroll to top of page"
-			title="Scroll to top"
 			className="justify-self-end rounded-xl"
+			onClick={scrollToTop}
+			size="icon"
+			title="Scroll to top"
+			variant="outline"
 		>
 			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
+				aria-hidden="true"
 				fill="none"
+				height="24"
+				role="img"
 				stroke="currentColor"
-				strokeWidth="2"
 				strokeLinecap="round"
 				strokeLinejoin="round"
-				aria-hidden="true"
-				role="img"
+				strokeWidth="2"
+				viewBox="0 0 24 24"
+				width="24"
+				xmlns="http://www.w3.org/2000/svg"
 			>
-				<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+				<path d="M0 0h24v24H0z" fill="none" stroke="none" />
 				<path d="M6 15l6 -6l6 6" />
 			</svg>
 		</Button>

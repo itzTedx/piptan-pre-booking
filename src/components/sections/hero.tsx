@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+
 import { bookSchema } from "@/lib/site-config";
+
 import { TextAnimate } from "../animation/text-animate";
 import { HeroHeading } from "../atom/heading";
 import { Button } from "../ui/button";
@@ -9,21 +11,21 @@ import { Button } from "../ui/button";
 export default function HeroSection() {
 	return (
 		<section
+			aria-labelledby="hero-title"
+			className="relative min-h-screen pt-12 pb-28"
 			itemScope
 			itemType="https://schema.org/Book"
-			className="relative min-h-screen pt-12 pb-28"
-			aria-labelledby="hero-title"
 		>
 			<Script type="application/ld+json">{JSON.stringify(bookSchema)}</Script>
-			<div className="relative container grid grid-cols-1 gap-3 pt-20 lg:grid-cols-3 lg:pt-28">
+			<div className="container relative grid grid-cols-1 gap-3 pt-20 lg:grid-cols-3 lg:pt-28">
 				<header className="absolute inset-x-0 top-9 text-center lg:top-16">
 					<HeroHeading />
 				</header>
 				<div className="md:self-end lg:pb-10">
 					<TextAnimate
 						animation="fadeIn"
-						by="line"
 						as="h2"
+						by="line"
 						className="font-grotesk text-3xl max-lg:text-center md:text-4xl/11"
 						delay={0.3}
 						once
@@ -31,38 +33,38 @@ export default function HeroSection() {
 						{`Discover the visionary\n\nstrategies behind one of the\n\nworld's most iconic and dynamic cities.`}
 					</TextAnimate>
 				</div>
-				<figure className="book-container" aria-label="Book cover preview">
+				<figure aria-label="Book cover preview" className="book-container">
 					<article className="book" role="presentation">
 						<div className="front">
 							<div className="cover">
 								<Image
-									src="/gold-cover.webp"
 									alt="Dubai's Urban Evolution book cover, gold edition"
-									fill
-									priority
 									className="gold-cover z-10 object-cover"
-									sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
+									fill
 									itemProp="image"
+									priority
+									sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
+									src="/gold-cover.webp"
 								/>
 								<Image
-									src="/cover.webp"
 									alt="Dubai's Urban Evolution by Shashi S. Piptan — book cover"
-									fill
-									priority
 									className="object-cover"
-									sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
+									fill
 									itemProp="image"
+									priority
+									sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
+									src="/cover.webp"
 								/>
 							</div>
 						</div>
-						<div className="left-side" aria-hidden="true">
+						<div aria-hidden="true" className="left-side">
 							<Image
-								src="/side.webp"
 								alt=""
+								className="object-cover"
 								fill
 								priority
-								className="object-cover"
 								sizes="50px"
+								src="/side.webp"
 							/>
 						</div>
 					</article>
@@ -70,8 +72,8 @@ export default function HeroSection() {
 				<div className="z-10 self-end pb-10">
 					<TextAnimate
 						animation="fadeIn"
-						by="line"
 						as="p"
+						by="line"
 						className="font-grotesk text-lg"
 						delay={0.4}
 						once
@@ -79,18 +81,18 @@ export default function HeroSection() {
 						{`Explore Dubai's transformation through expert insights\n\nand proven strategies for investors seeking high returns\n\nin real estate, infrastructure, and urban development.\n\nYour roadmap starts here!`}
 					</TextAnimate>
 					<div className="flex items-center gap-6 pt-4">
-						<Button variant="secondary" asChild>
+						<Button asChild variant="secondary">
 							<Link
-								href="#pre-order"
 								aria-label="Pre-order Dubai's Urban Evolution"
+								href="#pre-order"
 							>
 								Pre-Order Now
 							</Link>
 						</Button>
-						<Button variant="link" asChild>
+						<Button asChild variant="link">
 							<Link
-								href="#about-heading"
 								aria-label="Learn more about the book"
+								href="#about-heading"
 							>
 								Learn More
 							</Link>
@@ -101,16 +103,16 @@ export default function HeroSection() {
 			<picture>
 				<source srcSet="/due-bg.webp" type="image/webp" />
 				<Image
-					src="/due-bg.jpg"
 					alt=""
-					fill
-					className="-z-20 object-cover opacity-20"
-					sizes="100vw"
-					loading="lazy"
 					aria-hidden="true"
+					className="-z-20 object-cover opacity-20"
+					fill
+					loading="lazy"
+					sizes="100vw"
+					src="/due-bg.jpg"
 				/>
 			</picture>
-			<div className="from-background to-background/0 absolute bottom-0 -z-10 h-1/2 w-full bg-gradient-to-t" />
+			<div className="absolute bottom-0 -z-10 h-1/2 w-full bg-linear-to-t from-background to-background/0" />
 		</section>
 	);
 }
